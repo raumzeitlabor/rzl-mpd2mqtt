@@ -1,0 +1,5 @@
+librzl-mpd2mqtt-perl (0.01-1) unstable; urgency=low
+
+  * Initial Release.
+
+ -- Simon Elsbrock <simon@iodev.org>  Sun, 29 Jun 2014 19:11:55 +0200
