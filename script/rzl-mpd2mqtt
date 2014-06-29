@@ -1,0 +1,38 @@
+#!/usr/bin/env perl
+# vim:ts=4:sw=4:expandtab
+#
+# RZL-MPD2MQTT
+#
+# © 2014 Simon Elsbrock, see LICENSE
+#
+
+BEGIN {
+    use FindBin;
+    if ($FindBin::Bin =~ m,/script/?$,) {
+        use lib "$FindBin::Bin/../lib";
+    }
+}
+
+
+use EV;
+use feature qw(say);
+use Getopt::Long;
+use FindBin;
+
+use RZL::MPD2MQTT;
+
+GetOptions(
+    'version' => sub {
+        say "$0 v$RZL::MPD2MQTT::VERSION";
+
+        exit 0;
+    },
+    'help' => sub {
+        say "$0: no options, started via initscript.";
+        exit 0;
+    }
+);
+
+RZL::MPD2MQTT->run;
+
+EV::loop;
