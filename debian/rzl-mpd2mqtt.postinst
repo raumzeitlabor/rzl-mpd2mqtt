@@ -3,9 +3,9 @@
 set -e
 
 if [ "$1" = "configure" ]; then
-	if ! getent passwd rzl-xkeyscore >/dev/null; then
+	if ! getent passwd rzl-mpd2mqtt >/dev/null; then
 		adduser --system --quiet --home / --no-create-home \
-		--shell /bin/false --group --gecos "rzl-xkeyscore daemon user" rzl-xkeyscore
+		--shell /bin/false --group --gecos "rzl-mpd2mqtt daemon user" rzl-mpd2mqtt
 	fi
 fi
 

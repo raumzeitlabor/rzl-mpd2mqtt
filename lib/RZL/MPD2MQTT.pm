@@ -4,8 +4,6 @@ use 5.006;
 use strict;
 use warnings FATAL => 'all';
 
-use Data::Dump;
-
 use JSON::XS;
 use Sys::Syslog;
 use YAML::Syck;
@@ -69,7 +67,7 @@ sub run {
         clean_session => $cfg->{MQTT}->{cleansession},
         client_id => $cfg->{MQTT}->{clientid},
         message_log_callback => sub {
-            syslog('debug', join (',', @_));
+            #syslog('debug', join (',', @_));
         },
     );
 
@@ -119,7 +117,6 @@ sub run {
                     } else {
 
                         my $newsongstate = $line;
-                        delete $state{qw/Time Last-Modified/};
 
                         if ($newsongstate ne $oldsongstate) {
                             $oldsongstate = $line;

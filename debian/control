@@ -1,10 +1,10 @@
-Source: librzl-mpd2mqtt-perl
+Source: rzl-mpd2mqtt
 Section: perl
 Priority: optional
 Maintainer: Simon Elsbrock <simon@iodev.org>
 Build-Depends: debhelper (>= 9)
-Build-Depends-Indep: libanyevent-mqtt-perl,
- libanyevent-perl,
+Build-Depends-Indep: libanyevent-perl,
+ libanyevent-mqtt-perl,
  libjson-xs-perl,
  libmodule-install-perl,
  libyaml-syck-perl,
@@ -12,7 +12,7 @@ Build-Depends-Indep: libanyevent-mqtt-perl,
 Standards-Version: 3.9.5
 Homepage: https://metacpan.org/release/RZL-MPD2MQTT
 
-Package: librzl-mpd2mqtt-perl
+Package: rzl-mpd2mqtt
 Architecture: all
 Depends: ${misc:Depends}, ${perl:Depends},
  libanyevent-mqtt-perl,

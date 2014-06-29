@@ -1,0 +1,11 @@
+[Unit]
+Description=RZL MPD2MQTT Bridge
+
+[Service]
+User=rzl-mpd2mqtt
+Type=simple
+Restart=always
+ExecStart=/usr/bin/rzl-mpd2mqtt
+
+[Install]
+WantedBy=multi-user.target
